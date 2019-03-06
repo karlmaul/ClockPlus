@@ -20,7 +20,7 @@
 package com.philliphsu.clock2.alarms.data;
 
 import android.content.Context;
-import android.support.design.widget.Snackbar;
+import com.google.android.material.snackbar.Snackbar;
 import android.view.View;
 
 import com.philliphsu.clock2.data.AsyncDatabaseTableUpdateHandler;

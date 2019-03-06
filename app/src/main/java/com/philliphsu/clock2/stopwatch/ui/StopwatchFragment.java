@@ -28,10 +28,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.Loader;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +37,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.philliphsu.clock2.R;
 import com.philliphsu.clock2.list.RecyclerViewFragment;
 import com.philliphsu.clock2.stopwatch.Lap;
@@ -49,7 +48,8 @@ import com.philliphsu.clock2.util.ProgressBarUtils;
 
 import java.lang.ref.WeakReference;
 
-import butterknife.Bind;
+import androidx.loader.content.Loader;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -73,10 +73,10 @@ public class StopwatchFragment extends RecyclerViewFragment<
     private Drawable                            mStartDrawable;
     private Drawable                            mPauseDrawable;
 
-    @Bind(R.id.chronometer) ChronometerWithMillis mChronometer;
-    @Bind(R.id.new_lap)     ImageButton           mNewLapButton;
-    @Bind(R.id.stop)        ImageButton           mStopButton;
-    @Bind(R.id.seek_bar)    SeekBar               mSeekBar;
+    @BindView(R.id.chronometer) ChronometerWithMillis mChronometer;
+    @BindView(R.id.new_lap)     ImageButton           mNewLapButton;
+    @BindView(R.id.stop)        ImageButton           mStopButton;
+    @BindView(R.id.seek_bar)    SeekBar               mSeekBar;
 
     /**
      * This is called only when a new instance of this Fragment is being created,

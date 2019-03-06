@@ -20,14 +20,15 @@
 package com.philliphsu.clock2;
 
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Created by Phillip Hsu on 6/30/2016.
@@ -45,23 +46,25 @@ public abstract class BaseFragment extends Fragment {
     @LayoutRes
     protected abstract int contentLayout();
 
+    Unbinder unbinder;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(contentLayout(), container, false);
-        ButterKnife.bind(this, view);
+        unbinder = ButterKnife.bind(this, view);
         return view;
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this); // Only for fragments!
+        unbinder.unbind(); // Only for fragments!
     }
 
     /**
      * Callback invoked when this Fragment is part of a ViewPager and it has been
-     * selected, as indicated by {@link android.support.v4.view.ViewPager.OnPageChangeListener#onPageSelected(int)
+     * selected, as indicated by {@link androidx.core.view.ViewPager.OnPageChangeListener#onPageSelected(int)
      * onPageSelected(int)}.
      */
     public void onPageSelected() {

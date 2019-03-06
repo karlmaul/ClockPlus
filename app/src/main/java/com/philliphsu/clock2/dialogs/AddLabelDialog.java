@@ -19,13 +19,14 @@
 
 package com.philliphsu.clock2.dialogs;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.AppCompatEditText;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 
 import com.philliphsu.clock2.R;
+
+import androidx.appcompat.widget.AppCompatEditText;
 
 import static com.philliphsu.clock2.util.KeyboardUtils.showKeyboard;
 

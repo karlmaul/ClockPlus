@@ -19,13 +19,13 @@
 
 package com.philliphsu.clock2.dialogs;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.Nullable;
 
 import com.philliphsu.clock2.R;
 import com.philliphsu.clock2.ringtone.playback.RingtoneLoop;

@@ -20,11 +20,9 @@
 package com.philliphsu.clock2.dialogs;
 
 import android.net.Uri;
-import android.support.v4.app.FragmentManager;
-import android.util.Log;
+import androidx.fragment.app.FragmentManager;
 
-import com.philliphsu.clock2.dialogs.DialogFragmentController;
-import com.philliphsu.clock2.dialogs.RingtonePickerDialog;
+import android.util.Log;
 
 /**
  * Created by Phillip Hsu on 9/20/2016.
