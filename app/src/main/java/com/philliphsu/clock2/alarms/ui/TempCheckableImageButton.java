@@ -51,7 +51,7 @@ public class TempCheckableImageButton extends AppCompatImageButton implements Ch
     }
 
     public TempCheckableImageButton(Context context, AttributeSet attrs) {
-        this(context, attrs, android.support.v7.appcompat.R.attr.imageButtonStyle);
+        this(context, attrs, androidx.appcompat.R.attr.imageButtonStyle);
     }
 
     public TempCheckableImageButton(Context context, AttributeSet attrs, int defStyleAttr) {

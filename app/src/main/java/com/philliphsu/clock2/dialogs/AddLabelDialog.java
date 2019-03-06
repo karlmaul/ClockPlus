@@ -71,7 +71,7 @@ public class AddLabelDialog extends BaseAlertDialogFragment {
         int spacingRight = getResources().getDimensionPixelSize(R.dimen.item_padding_end);
 
         builder.setTitle(R.string.label)
-                .setView(mEditText, spacingLeft, 0, spacingRight, 0);
+                .setView(mEditText);
 
         AlertDialog dialog = super.createFrom(builder);
         dialog.setOnShowListener(new DialogInterface.OnShowListener() {

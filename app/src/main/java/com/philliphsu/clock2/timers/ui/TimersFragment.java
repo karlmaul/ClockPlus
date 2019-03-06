@@ -42,7 +42,6 @@ import com.philliphsu.clock2.timers.Timer;
 import com.philliphsu.clock2.timers.data.TimerCursor;
 import com.philliphsu.clock2.timers.data.TimersListCursorLoader;
 
-import static butterknife.ButterKnife.findById;
 import static com.philliphsu.clock2.util.ConfigurationUtils.getOrientation;
 
 public class TimersFragment extends RecyclerViewFragment<Timer, TimerViewHolder, TimerCursor, TimersCursorAdapter> {
@@ -72,7 +71,7 @@ public class TimersFragment extends RecyclerViewFragment<Timer, TimerViewHolder,
         View view = super.onCreateView(inflater, container, savedInstanceState);
         final Resources r = getResources();
         if (getOrientation(r) == Configuration.ORIENTATION_LANDSCAPE) {
-            RecyclerView list = findById(view, R.id.list);
+            RecyclerView list = getView().findViewById(R.id.list);
             int cardViewMargin = r.getDimensionPixelSize(R.dimen.cardview_margin);
             list.setPaddingRelative(cardViewMargin/*start*/, cardViewMargin/*top*/, 0, list.getPaddingBottom());
         }

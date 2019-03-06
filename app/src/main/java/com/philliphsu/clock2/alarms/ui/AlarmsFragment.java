@@ -76,7 +76,7 @@ public class AlarmsFragment extends RecyclerViewFragment<Alarm, BaseAlarmViewHol
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mSnackbarAnchor = getActivity().findViewById(R.id.main_content);
+        mSnackbarAnchor = getView().findViewById(R.id.main_content);
         mAlarmController = new AlarmController(getActivity(), mSnackbarAnchor);
         mAsyncUpdateHandler = new AsyncAlarmsTableUpdateHandler(getActivity(),
                 mSnackbarAnchor, this, mAlarmController);
